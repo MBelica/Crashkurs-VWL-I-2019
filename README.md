@@ -1,0 +1,1 @@
+Skript für den Crashkurs zur Vorlesung 'VWL I - Mirkoökonomie' am KIT im W18/19

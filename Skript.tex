@@ -1,0 +1,89 @@
+\documentclass[10pt]{scrreprt}
+
+\usepackage{cmap}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english, ngerman]{babel}
+
+\usepackage{afterpage}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{csquotes}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{mathtools}
+\usepackage{mdframed}
+\usepackage{microtype}
+\usepackage{sgame}
+\usepackage{tikz} 
+\usepackage{titlesec}
+\usepackage{xpatch}
+\usetikzlibrary{hobby}
+
+
+%standard setup
+\author{Martin Belica ~\\ {\large im Auftrag von fuks e.V.} ~}
+\date{Wintersemester 2018}
+\publishers{Karlsruher Institut für Technologie}
+\title{{\Large Crashkurs} \\ Volkswirtschaftslehre I - Mirkoökonomie}
+
+\pdfinfo{
+        /Author (Martin Belica)
+        /Title   (Crashkurs Volkswirtschaftslehre I - Mirkoökonomie)
+        /Subject (Volkswirtschaftskehre I)
+        /Keywords (Crashkurs, Volkswirtschaftslehre, Mirkoökonomie, VWLI)
+}
+
+\makeatletter
+	\setlength{\parindent}{0cm}
+	\xpatchcmd{\proof}{\@addpunct{.}}{\@addpunct{:}}{}{}
+	\titleclass{\chapter}{straight}
+	\titleformat{\chapter}{\bfseries\huge}{\thechapter}{0.4em}{}
+	\titlespacing*{\chapter}{0mm}{3em}{1em}
+\makeatother
+
+\newcounter{thm}
+\newtheoremstyle{thmstyle}
+  {0.25em} % Space above
+  {1.25em} % Space below
+  {} % Body font
+  {} % Indent amount
+  {\bfseries} % Theorem head font
+  {: } % Punctuation after theorem head
+  {0em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+\theoremstyle{thmstyle} 
+\numberwithin{thm}{chapter}
+
+\newtheorem*{beispiel}{Beispiel}
+\newtheorem*{krb}{KR}
+
+\newenvironment{kr}
+  {\begin{mdframed}\begin{krb}}
+  {\end{krb}\end{mdframed}}
+  
+  
+\begin{document}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\maketitle
+
+\input{chap/Preface}
+
+\include{chap/chap2}
+\include{chap/chap3}
+\include{chap/chap4}
+\include{chap/chap5}
+\include{chap/chap7}
+\include{chap/chap8}
+\include{chap/chap9}
+\include{chap/chap10}
+% \include{chap/chap11} 
+% todo todo
+% todo Ratschlag: Komperative Statistiken aus Skript!
+
+\end{document}

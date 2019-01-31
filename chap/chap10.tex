@@ -1,0 +1,91 @@
+\chapter{Oligopol}
+
+Ein Oligopol ist ein markt mit wenigen aktiven Anbieter, die alle über Marktmacht verfügen. Ein Oligopol ist somit eine Art \enquote{Mischform} zwischen dem Monopol und dem vollkommenen Wettbewerb. Wir betrachten vereinfachend den Fall des Duopols mit 2 identischen Anbietern. Der Output des Unternehmung $i$ wir mit $y_i$ ($i=1,2$) bezeichnet und der Industrieoutput ist $Y = y_1 + y_2$. ~\bigskip
+
+Abhängig davon wie und ob die Firmen über den Preis oder die Menge entscheiden, entstehen 5 verschiedene Fälle:
+\begin{itemize}
+	\item Menge $q$
+		\begin{itemize}
+			\item sequentiell: Stackelberg (Mengenführerschaft)
+			\item simultan: Cournot
+		\end{itemize}
+	\item Preis $p$
+		\begin{itemize}
+			\item sequentiell: Preisführerschaft
+			\item simultan: Bertrand
+		\end{itemize}		
+	\item Kooperativ: Kartell
+\end{itemize}
+
+\subsubsection*{Stackelberg}
+
+\textbf{Leader-Follower-Modell}: Der Leader antizipiert, wie der Follower auf seine (Leader-) Produktionsmenge reagieren wird und optimiert in Abhängigkeit davon seinen Gewinn. Seien $y_L$, $y_F$ die vom Leader bzw. Follower am Markt angebotenen Mengen und $p(y)$ die inverse Nachfrage.
+
+\begin{kr}[Stackelberg] ~\
+	\begin{itemize}
+		\item Antizipation:
+			\begin{itemize}
+				\item Gewinn des Leaders: $\Pi_L(y_L, y_F) = p(y_L + y_F) \cdot y_L - C_L(y_L)$
+				\item Gewinn des Followers: $\Pi_F(y_L, y_F) = p(y_L + y_F) \cdot y_F - C_F(y_F)$
+			\end{itemize}
+		\item Reaktionsfunktion des Followers herleiten: $\frac{\partial \Pi_F}{\partial y_F} = 0$ nach $y_F(y_L)$ auflösen
+		\item Optimalen Output des Leaders $y_L^*$ bestimmen: setze $y_F$ in $\Pi_L(y_L, y_F)$ ein, maximiere die Funktion (ableiten) und löse nach $y_L^*$ auf
+		\item $y_L^*$ in $\Pi_F(y_L, y_F)$ Einsetzen und Maximieren (ableiten) ergibt $y_F^*$
+		\item Marktpreis bestimmen: $p^* = p(y_L^* + y_F^*)$ durch einsetzen von $y_L^*$ und $y_F^*$
+	\end{itemize}
+\end{kr}
+
+\subsubsection*{Cournot}
+
+Beide Anbieter legen simultan ihre Angebotsmenge fest und berücksichtigen die Angebotsmenge des jeweils anderen:
+
+\begin{kr}[Cournot] ~\
+	\begin{itemize}
+		\item Antizipation:
+			\begin{itemize}
+				\item Gewinn von Firm 1: $\Pi_1(y_1, y_2) = p(y_1 + y_2) \cdot y_1 - C_1(y_1)$
+				\item Gewinn von Firma 2: $\Pi_2(y_1, y_2) = p(y_1 + y_2) \cdot y_2 - C_2(y_2)$
+			\end{itemize}
+		\item Reaktionsfunktion beider Anbieter herleiten	
+			\begin{itemize}
+				\item $\frac{\partial \Pi_1}{\partial y_1} = 0$ nach $y_1(y_2)$ auflösen
+				\item $\frac{\partial \Pi_2}{\partial y_2} = 0$ nach $y_2(y_1)$ auflösen
+			\end{itemize}
+		\item Reaktionsfunktionen \enquote{ineinander einsetzen} (setze $y_1(y_2)$ in $y_2(y_1)$ ein oder umgekehrt)
+		\item Auflösen zu den den Mengen $y_1^*$ und $y_2^*$
+	\end{itemize}
+\end{kr}
+
+\subsubsection*{Preisführerschaft}
+
+\textbf{Leader-Follower-Modell}: Der Leader setzt den Preis zuerst, der Follower agiert als Preisnehmer. Damit ist der Preis $p$ im Maximierungsproblem des Followers exogen.
+
+\begin{kr}[Preisführerschaft] ~\
+	\begin{itemize}
+		\item Für festes $p$ antizipiert der Leader das Problem des Followers:
+			$$ \max \Pi_F(y_F) = p \cdot y_F - C_F(y_F) $$	
+		\item Leader leitet die Reaktionsfunktion von F her: $\frac{\partial \Pi_F}{\partial y_F} = 0$ nach $y_F(p)$ auflösen
+		\item Der Leader weiß nun, dass der Follower für jeden Preis die Menge $y_F(p)$ aufbringen wird. Die restliche Nachfrage $D(p) - y_F(p)$ wird vom Leader befriedigt.
+		\item Der Leader sieht sich also dem folgenden Problem gegenüber:
+			$$ \max \Pi_L(p) = p \cdot \left( D(p) - y_F(p) \right) - C_L \left(D(p) - y_F(p) \right) $$
+	\end{itemize}
+\end{kr}
+
+\subsubsection*{Bertrand-Modell}
+
+Wir nehmen zur Vereinfachung an, dass $C_1(y) = C_2(y) = c(y)$, d.h. beide Firmen haben die gleiche Kostenfunktion. ~\bigskip
+
+Es entsteht die Situation des Bertrand-Paradoxon: im Kapitel zum Monopol haben wir gesehen, dass ein Monopolist den Preis und die Verkaufsmenge gewinnmaximierend festsetzt. Der Monopolpreis ist für gewöhnlich höher als der Preis im vollkommenen Wettbewerb. Durch Hinzufügen von nur einer weiteren Unternehmung im Betrand-Wettbewerb (d.h. nur bei zwei Firmen) entsteht jedoch exakt dieselbe Situatioon wie im vollkommen Wettbewerb bei \enquote{unendlich vielen} Unternehmungen.
+
+\begin{kr}[Betrand]
+	Das einzige Nash-Gleichgewicht im Betrand-Wettbewerb bei gleichen Kostenfunktionen der beiden Agenten ist:
+	$$ p_1 = p_2 = MC $$	
+	Einsetzen dessen in die restliche Funktionen ergibt die produzierten Mengen, die Kosten und den Gewinn.
+\end{kr}
+
+\subsubsection*{Kartell}
+
+Die Firmen (Firma 1 und Firma 2) maximieren ihren Gesamtgewinn und setzen den gemeinsamen Preis $p$. Daher lautet das Optimierungsproblem: 
+	$$ \max_{y_1, y_2} ~ \left( \Pi_1(y_1, y_2) + \Pi_2(y_1, y_2) \right) = \max_{y_1, y_2} ~ p \cdot \left( y_1 + y_2 \right) - c_1(y_1) - c_2(y_2) $$
+Durch partiellen Ableiten der gemeinsamen Gewinnfunktion nach $y_1$ bzw. $y_2$ und Gleichsetzen mit $0$ erhält man im Optimum:
+	$$ MC_1(y_1^*) = MC_2(y_2^*) $$	

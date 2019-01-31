@@ -1,0 +1,93 @@
+\chapter{Spieltheorie}
+
+Die Spieltheorie analysiert Situationen mit strategischer Interaktion, in denen sich also der Nutzen, den die Akteure aus der Situation ziehen, durch individuelle Entscheidungen wechselseitig beeinflusst. ~\bigskip
+
+Eine Allokation heißt \textbf{Pareto-Effizienz}, falls keine Akteur besser gestellt werden kann, ohne einen anderen schlechter zu stellen. Damit darf es keine andere Allokation geben, in der jeder Akteur mindestens gleich gut gestellt  und mindestens eine Person echt besser gestellt ist. Pareto-Effizienz hat allerdings nichts mit Gerechtigkeit zu tun; lediglich Verschwendung in der Verteilung darf nicht vorliegen. ~\bigskip
+
+Ein \textbf{Spiel} ist eine strategische Interaktionssituation die durch folgenden Aspekte charakterisiert wird:
+\begin{itemize}
+	\item Spieler
+	\item Strategien und Spielregeln für jeden Spieler
+	\item Spielergebnisse bzw. Spielausgänge
+	\item Nutzen aus jedem möglichen Spielergebnis
+\end{itemize}
+
+\section{Spiele in Normalform}
+
+Die Normalform beschreibt lediglich die Spieler, Strategien und Auszahlungen eines Spiels - was für viele Spiele alle relevanten Informationen enthält. Ein solches Spiel kann durch eine Matrix dargestellt werden. ~\bigskip
+
+Als Beispiel sei hier die Situation zweier Gefangener dargestellt, die beschuldigt werden, gemeinsam ein Verbrechen begangen zu haben. Die beiden Gefangenen werden einzeln verhört und können nicht miteinander kommunizieren.
+\begin{table}[!htbp]
+	\centering
+	\begin{game}{2}{2}[Spieler 1][Spieler 2]
+	 	   	  	   &  gestehen &  schweigen  \\
+		gestehen   &  $2, 2$   & $0, 3$      \\
+		schweigen  &  $3, 0$   & $1, 1$      \\
+	\end{game}
+\end{table}
+
+Eine Strategie die für einen Spieler immer vorteilhaft ist - unabhängig von den Entscheidungen aller anderen Spieler - nennt man \textbf{dominante Strategie}. Spielt jeder Spieler eine dominante Strategie, so liegt ein \textbf{Gleichgewicht in dominanten} Strategien vor. ~\smallskip
+
+Zum Ermitteln von dominanten Strategien ist es möglich die sogenannten besten Reaktionen zu verwenden. Eine Strategie ist eine \textbf{Beste Reaktion}, wenn sie den Nutzen eines Spielers - gegeben die Strategien aller anderen Spieler - maximiert.
+
+\begin{kr}[Beste Antwort]~\
+	\begin{itemize} 		
+		\item In jeder Spalte wird die höchste Auszahlung von Spieler 1 unterstrichen. 
+		\item In jeder Zeile wird die höchste Auszahlung von Spieler 2 unterstrichen.
+	\end{itemize}	
+\end{kr}
+
+\begin{kr}[Dominante Strategie] ~\
+	\begin{itemize}
+		\item Eine Strategie ist für Spieler 1 dominant, falls nach KR (Beste Antwort) alle Auszahlungen in der zugehörigen Zeile unterstrichen sind.
+		\item Eine Strategie ist für Spieler 2 dominant, falls nach KR (Beste Antwort) alle Auszahlungen in der zugehörigen Spalte unterstrichen sind.
+	\end{itemize}	
+\end{kr}
+
+Ein \textbf{Gefangenendilemma} kennzeichnet eine Situation, in der individuell rationales Verhalten der einzelnen Spieler zu einem für die Gruppe nicht Pareto-optimialem Ergebnis führt. Es existiert dann ein Strategienpaar, das zu einer Pareto-Verbessrung führt und das nur durch Änderung der Strategien aller Spieler erreicht werden kann. ~\bigskip
+
+Ein \textbf{Nash-Gleichgewicht in reinen Strategien} ist ein Strategienpaar, bei dem jeder Spieler die optimale Wahl trifft, gegeben der Wahl des anderen Spielers. Sie ist also die gegenseitig beste Antwort und damit will kein Spieler einseitig vom  Nash-Gleichgewicht abweichen.
+
+\begin{kr}[Nash-Gleichgewicht in reinen Strategien] ~\\
+	Das Strategienpaar das zu einer Zelle führt, in der nach KR (Beste Antwort) die Auszahlungen beider Spieler unterstrichen sind, stellt ein Nash-Gleichgewicht in reinen Strategien dar.
+\end{kr}
+
+Es muss kein Nash-Gleichgewicht in reinen Strategien geben. Ein \textbf{Nash-Gleichgewicht in gemischten Strategien} ist eine Wahrscheinlichkeitsverteilung über die reine Strategien aller Spieler von der kein Spieler einseitig abweichen möchte. 
+
+\begin{kr}[Nash-Gleichgewicht in gemischten Strategien] ~\\
+	Haben beide Spieler zwei Strategien, so kann man das Nash-Gleichgewicht in gemischten Strategien ermitteln indem man für jeden Spieler den erwarteten Nutzen seiner beiden Strategien gegeben der Wahrscheinlichkeitsverteilung gleich setzt.
+\end{kr}
+
+\section{Sequentielle Spiele}
+
+Eine \textbf{Strategie} in sequentiellen Spielen ist ein vollständiger Aktionsplan, der zu jedem beliebigen Spielzeitpunkt die Aktion eines Spielers beschreibt.
+
+Sequentielle Spiele werden im Allgemeinen durch Rückwärtsinduktion gelöst. Dabei werden alle Nash-Gleichgewichte identifiziert die nicht auf unglaubwürdigen Drohungen beruhen. Die resultierende Strategie definiert ein \textbf{teilspielperfektes Nash-Gleichgewicht}.
+
+\begin{kr}[Teilspielperfekte Nash-Gleichgewichte] ~\\
+	Ersetze iterativ alle letzten Entscheidungsknoten durch die glaubwürdigen Drohungen im Punkt, bis alle Knoten ersetzt sind. Alle getroffenen Entscheidungen bilden das teilspielperfekte Nash-Gleichgewicht.
+\end{kr}
+
+\section{Auktionen}
+
+Es gibt vier Standardformen der Auktion. Sie unterscheiden sich in der Art der Gebotsabgaben, der Zuschlags- und Preisregeln:
+\begin{itemize}
+	\item \textbf{Englische Auktion}: Aufsteigende, offene Gebote. Höchstgebot bzw. letzter verbleibender Bieter erhält den Zuschlag. Gewinner zahl sein Gebot.
+	\item \textbf{Holländische Auktion}: Absteigende Auktion. Preisvorschläge durch Auktionator fallen. Den Zuschlag erhält das erste Gebot und gezahlt wird auch das Gebot.
+	\item \textbf{Erstpreisauktion}: Verdeckte, einmalige Gebotsabgabe. Höchstgebot erhält den Zuschlag. Gewinner zahlt sein Gebot.
+	\item \textbf{Zweitpreisauktion} (auch Vickrey-Auktion genannt): Verdeckte, einmalige Gebotsabgabe. Hächstebot erhält den Zuschlag. Gewinner zahl das zweithächste Gebot.
+\end{itemize}
+
+\subsubsection*{Private Value Auktion}
+
+Für diese vier Formen der Auktionen gilt das sogenannte Revenue Equivalance Theorem (RET). Sind die Bieter nämlich risikoneutral mit privaten Wertschätzungen, so erbringen alle obigen Formen in Erwartung denselben Erlös - das heißt es entsteht der selbe Verkaufspreis (\textbf{Erlösäquivalenz}). ~\bigskip
+
+Allerdings kann es aus empirischer Sicht Sinn machen, die Erstpreis- der Zweitpreisauktion vorzuziehen. Unter Risikoaversion oder begrenzter Rationalität neigt diese zu einem höheren Erlös. ~\bigskip
+
+Außerdem sind Zweitpreis- und Englische Auktion strategisch äquivalent. In beiden Auktionsformen gibt es die dominante Strategie seine Wertschätzung zu bieten, die weder in der Erstpreis- noch in der Holländischen Auktion dominant ist.
+
+\subsubsection*{Common Value Auktion}
+ 
+ Ist der Wert des Gutes für alle Bieter gleich, kennen diesen jedoch die Bieter nicht, spricht man von einer Common-Value-Auktion. ~\bigskip
+ 
+ Jeder Bieter schätz den Wert des Gutes und basiert darauf seine Gebote. Die Durchschnittsschätzung aller Bieter ist generell ein guter Schätzer für den Wert des Gutes. Da der Zuschlag allerdings an den Höchstbietenden geht, fällt die erwartete Auszahlung des Auktionsgewinners typischerweise niedriger aus als die realisierte Auszahlung, da die Durchschnittsschätzung (\enquote{Common Value}) vom Gewinner überschätzt wird (im Extremfall können Verluste entstehen, was als \enquote{Winners' Curse} bezeichnet wird).
