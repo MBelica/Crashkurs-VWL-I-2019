@@ -53,12 +53,22 @@ Die Annahme die im folgenden stets getroffen wird, dass es nämlich lediglich zw
 	\item \textbf{Budgetmenge}: die Menge aller Konsumpläne die ein Konsument sich leisten kann 
 		$$ B(m, p_1, p_2) = \big\{ (x_1, x_2) \in \mathbb{R}^2 ~|~p_1 \cdot x_1 + p_2 \cdot x_2 \leq m \big\}. $$
 	\item \textbf{Budgetgerade}: oberer Rand der Budgetmenge
-		$$ p_1 \cdot x_1 + p_2 x_2 = m $$ 
+		$$ p_1 \cdot x_1 + p_2 \cdot x_2 = m $$ 
 \end{itemize}
 
-% todo Bild Budgetmengen und Verschiebungen der BM
+Hier sei angemerkt, dass $- \frac{p_1}{p_2}$ die Steigung der Budgetgerade ist. ~\bigskip
 
-Hier ist zu bemerken, dass $- \frac{p_1}{p_2}$ die Steigung der Budgetgerade ist. ~\bigskip
+\subsubsection*{Komparative Statik der Budgetmenge}
+
+Die Budgetmenge kann sich durch verschiedene Einflüsse ändern. Darunter fallen:
+\begin{itemize}
+	\item Einkommensveränderung, Pauschalsteuern und Pauschalsubventionen: führt zu einer Parallelverschiebung der Budgetgerade
+	\item Veränderung des Preisverhältnisses $- \frac{p_1}{p_2}$ durch z.B. Mengen- oder Wertsteuern und Mengen- oder Wertsubventionen: führt zu einer Änderung der Steigung der Budgetgerade
+	\item Rationierung: schneidet die Budgetmenge ab einer Menge ab
+	\item Gleichmäßige Wertsteuer: ändern sich alle Preise im gleichen Verhältnis ist dies äquivalent zu einer Einkommensbesteuerung; somit verschiebt sich die Budgetgerade auch hier parallel
+\end{itemize} 
+
+% todo Bild Budgetmengen und Verschiebungen der BM
 
 \subsubsection*{Unterschiedliche Präferenztypen}
 
@@ -72,15 +82,16 @@ Hier ist zu bemerken, dass $- \frac{p_1}{p_2}$ die Steigung der Budgetgerade ist
 
 \section{Nutzentheorie}
 
-Eine Nutzenfunktion $u(x)$ ordnet jedem Güterbündel einen Nutzen zu. Genau wie die Präferenzrelationen so sind Nutzenfunktionen lediglich ein ordinales Konzept. Ein Güterbündel $x$ wird genau dann $y$ bevorzugt, wenn $u(x) \geq u(y)$. % todo = jede stetige Präferenzrelation
+Eine Nutzenfunktion $u(x)$ ordnet jedem Güterbündel einen Nutzen zu. Genau wie die Präferenzrelationen so sind Nutzenfunktionen lediglich ein ordinales Konzept. Ein Güterbündel $x$ wird genau dann $y$ bevorzugt, wenn $u(x) \geq u(y)$.
 
 \subsubsection*{Repräsentationssatz}
-Gegeben sei eine Präferenzrelation die vollständig, transitiv und stetig ist, so existiert eine Funktion, die sie repräsentiert. Ist andersherum eine Nutzenfunktion gegeben, die eine Präferenzrelation repräsentiert, so ist sie vollständig und transitiv.
+
+Gegeben sei eine Präferenzrelation die vollständig, transitiv und stetig ist (d.h. jede stetige Präferenzrelation), so existiert eine Funktion, die sie repräsentiert. Ist andersherum eine Nutzenfunktion gegeben, die eine Präferenzrelation repräsentiert, so ist sie vollständig und transitiv.
 
 \subsubsection*{Grenzrate der Substitution (MRS)}
 
 Die Grenzrate der Substitution gibt das Tauschverhältnis an, zu dem ein Konsument Gut 1 gegeben Gut 2 tauschen würde. Dies entsprecht der Steigung der Indifferenzkurve.
-	$$ MRS = - \frac{MU_1}{MU_2} = - \frac{\partial u(x_1, x_2)}{\partial x_1} \big/ \frac{\partial u(x_1, x_2)}{\partial x_2} $$
+	$$ MRS = - \frac{MU_1}{MU_2} = - \frac{\partial u(x_1, x_2)}{\partial x_1} \big/ \frac{\partial u(x_1, x_2)}{\partial x_2} $$ % todo nutzen pro Preis muss gleich sein
 $MU_1$ bzw. $MU_2$ beschreiben den Grenznutzen von Gut 1 bzw. Gut 2 und sowohl die, als auch die MRS ist ein lokales Konzept.
 
 \subsubsection*{Positiv monotone Transformation}
@@ -102,7 +113,7 @@ Jede positiv monotone Transformation einer Nutzenfunktion stellt dieselbe Präfe
 	\item \textbf{Perfekte Komplemente}: $u(x_1, x_2) = \min \{ a \cdot x_1, b \cdot x_2 \}$, $a, b > 0$. Der Konsument möchte hier im festen Verhältnis $b : a$ konsumieren (in den \enquote{Ecken} der Indifferenzkurven). Die Optimalitätsbedingung ist damit: $a \cdot x_1 = b \cdot x_2$.
 	\item \textbf{Cobb-Doublas Nutzenfunktion}: $u(x_1, x_2) = x_1^c \cdot x_2^d$, $c, d > 0$. Dies kann (und sollte) positiv monoton transformiert werden: sei $\alpha = \frac{c}{c + d}$
 		$$ u(x_1, x_2) = x_1^{\alpha} \cdot x_2^{1 - \alpha}, \quad \alpha \in (0, 1) $$
-		Für $x_1, x_2 > 0$ repräsentieren Cobb-Douglas Nutzenfunktionen streng monotone, streng konvexe Präferenzen. Es gibt hier immer eine innere Lösung (siehe \enquote{optimale Entscheidung})
+		Für $x_1, x_2 > 0$ repräsentieren Cobb-Douglas Nutzenfunktionen streng monotone, streng konvexe Präferenzen. Es gibt hier immer eine optimale Entscheidung in einer innere Lösung (siehe \enquote{optimale Entscheidung})
 	\item \textbf{Quasilineare Präferenzen}: $u(x_1, x_2) = v(x_1) + x_2$ mit $v' > 0$, $v'' < 0$. Die Indifferenzkurven sind \enquote{quasi parallel verschobene} Versionen voneinander.
 \end{itemize}
 
@@ -113,11 +124,11 @@ Durch die Budgetmenge können wir beschreiben, was der Agent sich leisten kann. 
 Die zentrale Frage ist also: welcher Konsumplan in der Budgetmenge maximiert den Nutzen des Konsumenten?
 	$$ \max_{x_1, x_2 \in \mathbb{R}^+} u(x_1, x_2) ~\text{ s.t. }~ p_1 \cdot x_1 + p_2 \cdot x_2 \leq m $$ 
 	
-Der \textbf{optimale Konsumplan} ist der Konsumplan, unter allen die in der Budgetmenge liegen, der auf der höchsten Indifferenzkurve liegt. Bei monotonen Präferenzen liegt der optimale Konsumplan immer auf der Budgetgerade; damit gilt im Allgemeinen im Optimum:
+Der \textbf{optimale Konsumplan} ist der Konsumplan, unter allen die in der Budgetmenge liegen, der auf der höchsten Indifferenzkurve liegt. Bei monotonen Präferenzen liegt der optimale Konsumplan immer auf der Budgetgerade; damit suchen wir die Indifferenzkurve die im Allgemeinen gerade die Budgetgerade berührt und es gilt im Allgemeinen auch:
 		$$ MRS \overset{!}{=} - \frac{p_1}{p_2}, $$
 d.h. die Steigung der Indifferenzkurve = Steigung der Budgetgerade.
 \begin{itemize}
-	\item \enquote{Im Allgemeinen} da wir bereits gesehen haben, dass die MRS nicht immer bestimmbar ist (z.B. bei perfekten Komplementen) oder eine Randlösung existiert. Wir werden deswegen im Folgenden das Vorgehen für verschiedene Präferenzordnungen genauer betrachten.
+	\item \enquote{Im Allgemeinen} da wir bereits gesehen haben, dass die MRS nicht immer bestimmbar sein muss (z.B. bei perfekten Komplementen), nicht-konvexe Nutzenfunktionen gegeben sein können oder eine Randlösung existiert. Wir werden deswegen im Folgenden das Vorgehen für verschiedene Präferenzordnungen genauer betrachten.
 	\item Intuitiv wird durch diese Bedingung gefordert, dass von beiden Gütern der gleiche Grenznutzen im Verhältnis zum Preis erbracht wird, da $\frac{MU_1}{p_1} = \frac{MU_2}{p_2}$.
 \end{itemize}
 

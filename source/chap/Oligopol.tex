@@ -17,25 +17,47 @@ Abhängig davon wie und ob die Firmen über den Preis oder die Menge entscheiden
 	\item Kooperativ: Kartell
 \end{itemize}
 
+\subsubsection*{Bertrand-Modell}
+
+Wir nehmen zur Vereinfachung an, dass $C_1(y) = C_2(y) = c(y)$, d.h. beide Firmen haben die gleiche Kostenfunktion, produzieren zudem das gliche Gut und entscheiden über den Ausbringungspreis. ~\smallskip
+
+Es entsteht die Situation des Bertrand-Paradoxon: im Kapitel zum Monopol haben wir gesehen, dass ein Monopolist den Preis und die Verkaufsmenge gewinnmaximierend festsetzt. Der Monopolpreis ist für gewöhnlich höher als der Preis im vollkommenen Wettbewerb. Durch Hinzufügen von nur einer weiteren Unternehmung im Betrand-Wettbewerb (d.h. nur bei zwei Firmen unter Preiswettbewerb) entsteht jedoch exakt dieselbe Situation wie im vollkommen Wettbewerb bei \enquote{unendlich vielen} Unternehmungen, nämlich ein effizientes Marktgleichgewicht. ~\smallskip
+
+\begin{kr}[Betrand]
+	Das einzige Nash-Gleichgewicht im Betrand-Wettbewerb bei gleichen Kostenfunktionen der beiden Agenten ist:
+	$$ p_1 = p_2 = MC $$	
+	Einsetzen dessen in die restliche Funktionen ergibt die produzierten Mengen, die Kosten und den Gewinn.
+\end{kr}
+
+Kritiken zum Bertrand-Paradoxon:
+
+\begin{itemize}
+	\item Edgeworth (1897) -  Kapazitätsbeschränkungen: wenn eine Unternehmung nicht die gesamte Marktnachfrage produzieren kann, können positive Gewinne \& Ineffizienzen entstehen.
+	\item Zeithorizont: langfristige Verluste vs. kurzfristige Gewinne. Angenommen $p_1 = p_2 > c$; dann kann jede Unternehmung einen besonders großen kurzfristigen Gewinn machen, indem sie den Konkurrent leicht unterbietet; dieser wird in der nächsten Periode ebenfalls unterbieten, was zu einem  Preiskrieg führt; der kurzfristige Zusatzgewinn kann kleiner sein als der langfristige Verlust (Nullgewinne nach Preiskrieg).
+	\item Produktdifferenzierung
+\end{itemize}
+
+Das Effizienzresultat des Bertrand-Modells folgt aus restriktiven Annahmen. Wenn die Modelleinwände berücksichtigt werden, kommt es auch im Oligopol zu Marktineffizienz und Wohlfahrtsverlusten.
+
 \subsubsection*{Stackelberg}
 
-\textbf{Leader-Follower-Modell}: Der Leader antizipiert, wie der Follower auf seine (Leader-) Produktionsmenge reagieren wird und optimiert in Abhängigkeit davon seinen Gewinn. Seien $y_L$, $y_F$ die vom Leader bzw. Follower am Markt angebotenen Mengen und $p(y)$ die inverse Nachfrage.
+\textbf{Führer-Anpasser-Modell}: Der Mengenführer antizipiert, wie der Anpasser auf seine (Leader-) Produktionsmenge reagieren wird und optimiert in Abhängigkeit davon seinen Gewinn. Seien $y_1$, $y_2$ die vom Führer bzw. Anpasser am Markt angebotenen Mengen und $p(y)$ die inverse Nachfrage.
 
-\begin{kr}[Stackelberg] ~\
+\begin{kr}[Stackelberg - per \enquote{Rückwärts-Induktion}] ~\
 	\begin{itemize}
 		\item Antizipation:
 			\begin{itemize}
-				\item Gewinn des Leaders: $\Pi_L(y_L, y_F) = p(y_L + y_F) \cdot y_L - C_L(y_L)$
-				\item Gewinn des Followers: $\Pi_F(y_L, y_F) = p(y_L + y_F) \cdot y_F - C_F(y_F)$
+				\item Gewinn des Mengenführers: $\Pi_1(y_1, y_2) = p(y_1 + y_2) \cdot y_1 - C_1(y_1)$
+				\item Gewinn des Mengenanpassers: $\Pi_2(y_1, y_2) = p(y_1 + y_2) \cdot y_2 - C_2(y_2)$
 			\end{itemize}
-		\item Reaktionsfunktion des Followers herleiten: $\frac{\partial \Pi_F}{\partial y_F} = 0$ nach $y_F(y_L)$ auflösen
-		\item Optimalen Output des Leaders $y_L^*$ bestimmen: setze $y_F$ in $\Pi_L(y_L, y_F)$ ein, maximiere die Funktion (ableiten) und löse nach $y_L^*$ auf
-		\item $y_L^*$ in $\Pi_F(y_L, y_F)$ Einsetzen und Maximieren (ableiten) ergibt $y_F^*$
-		\item Marktpreis bestimmen: $p^* = p(y_L^* + y_F^*)$ durch einsetzen von $y_L^*$ und $y_F^*$
+		\item Reaktionsfunktion des Anpassers herleiten: $\frac{\partial \Pi_2}{\partial y_2} = 0$ nach $y_2(y_1)$ auflösen
+		\item Optimalen Output des Führers $y_1^*$ bestimmen: setze $y_2$ in $\Pi_1(y_1, y_2)$ ein, maximiere die Funktion (ableiten und gleich 0 setzen) und löse nach $y_1^*$ auf
+		\item $y_1^*$ in $\Pi_2(y_1, y_2)$ Einsetzen und Maximieren (ableiten und gleich 0 setzen) ergibt $y_2^*$
+		\item Marktpreis bestimmen: $p^* = p(y_1^* + y_2^*)$ durch einsetzen von $y_1^*$ und $y_2^*$ in die inverse Nachfrage.
 	\end{itemize}
 \end{kr}
 
-\subsubsection*{Cournot}
+\subsubsection*{Cournot} % todo man kann die werte auswendig lernen allerdings hat man zeit zur rechnung!
 
 Beide Anbieter legen simultan ihre Angebotsmenge fest und berücksichtigen die Angebotsmenge des jeweils anderen:
 
@@ -56,7 +78,9 @@ Beide Anbieter legen simultan ihre Angebotsmenge fest und berücksichtigen die A
 	\end{itemize}
 \end{kr}
 
-\subsubsection*{Preisführerschaft}
+Im Cournot-Nash-Gleichgewicht besteht allerdings die Möglichkeit der Pareto-Verbesserung des Cournot-Gleichgewichts. Ein einseitiges Abweichen ist zwar immer noch nicht Vorteilhaft für die einzelnen Firmen, allerdings ist der Gesamtgewinn potenziell erhöhbar. Damit existiert eine (potenzielle) Pareto-Verbesserung!
+
+\subsubsection*{Preisführerschaft} % todo ist Preisführerschaft überhaupt relevant?
 
 \textbf{Leader-Follower-Modell}: Der Leader setzt den Preis zuerst, der Follower agiert als Preisnehmer. Damit ist der Preis $p$ im Maximierungsproblem des Followers exogen.
 
@@ -71,21 +95,22 @@ Beide Anbieter legen simultan ihre Angebotsmenge fest und berücksichtigen die A
 	\end{itemize}
 \end{kr}
 
-\subsubsection*{Bertrand-Modell}
-
-Wir nehmen zur Vereinfachung an, dass $C_1(y) = C_2(y) = c(y)$, d.h. beide Firmen haben die gleiche Kostenfunktion. ~\bigskip
-
-Es entsteht die Situation des Bertrand-Paradoxon: im Kapitel zum Monopol haben wir gesehen, dass ein Monopolist den Preis und die Verkaufsmenge gewinnmaximierend festsetzt. Der Monopolpreis ist für gewöhnlich höher als der Preis im vollkommenen Wettbewerb. Durch Hinzufügen von nur einer weiteren Unternehmung im Betrand-Wettbewerb (d.h. nur bei zwei Firmen) entsteht jedoch exakt dieselbe Situatioon wie im vollkommen Wettbewerb bei \enquote{unendlich vielen} Unternehmungen.
-
-\begin{kr}[Betrand]
-	Das einzige Nash-Gleichgewicht im Betrand-Wettbewerb bei gleichen Kostenfunktionen der beiden Agenten ist:
-	$$ p_1 = p_2 = MC $$	
-	Einsetzen dessen in die restliche Funktionen ergibt die produzierten Mengen, die Kosten und den Gewinn.
-\end{kr}
 
 \subsubsection*{Kartell}
 
-Die Firmen (Firma 1 und Firma 2) maximieren ihren Gesamtgewinn und setzen den gemeinsamen Preis $p$. Daher lautet das Optimierungsproblem: 
-	$$ \max_{y_1, y_2} ~ \left( \Pi_1(y_1, y_2) + \Pi_2(y_1, y_2) \right) = \max_{y_1, y_2} ~ p \cdot \left( y_1 + y_2 \right) - c_1(y_1) - c_2(y_2) $$
+In einem Kartell legen die Firmen (Firma 1 und Firma 2) als Ziel fest den Gesamtgewinn zu maximieren und entscheiden dabei über die Ausbringungsmengen $y_1, y_2$. Daher lautet das Optimierungsproblem: 
+	$$ \max_{y_1, y_2} ~ \left( \Pi_1(y_1, y_2) + \Pi_2(y_1, y_2) \right) = \max_{y_1, y_2} ~ p \left( y_1 + y_2 \right) \cdot \left( y_1 + y_2 \right) - c_1(y_1) - c_2(y_2) $$
 Durch partiellen Ableiten der gemeinsamen Gewinnfunktion nach $y_1$ bzw. $y_2$ und Gleichsetzen mit $0$ erhält man im Optimum:
 	$$ MC_1(y_1^*) = MC_2(y_2^*) $$	
+
+\begin{kr}[Kartell]
+	Löse die Bedingung
+		$$ MC_1(y_1^*) = MC_2(y_2^*) $$	
+	nach einer der beiden Ausbringungsmengen auf und setze dies in das Optimierungsproblem des Kartells ein:
+		$$ \max_{y_1, y_2} ~ \left( \Pi_1(y_1, y_2) + \Pi_2(y_1, y_2) \right) = \max_{y_1, y_2} ~ p \left( y_1 + y_2 \right) \cdot \left( y_1 + y_2 \right) - c_1(y_1) - c_2(y_2) $$
+	Maximieren dieser Gleichung bezüglich der einen verbleibenden Ausbringungsmenge liefert die Kartelllösung.
+\end{kr}
+
+In der Kartelllösung besteht stets allerdings die Möglichkeit des Freifahrens (Freeriding), bei der eine das Abweichen einer Firma vom Gleichgewicht zu einem erhöhten Gewinn für sie führen kann. Aus diesem Grund besteht inhärent Instabilität in Kartellen, da eine Firma die Absprache bricht und ihren Gewinn dadurch vergrößert. ~\bigskip
+	
+	% todo Bild vergleich aller oligopol werte im allg. lineaen fall

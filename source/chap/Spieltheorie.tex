@@ -28,7 +28,7 @@ Als Beispiel sei hier die Situation zweier Gefangener dargestellt, die beschuldi
 
 Eine Strategie die für einen Spieler immer vorteilhaft ist - unabhängig von den Entscheidungen aller anderen Spieler - nennt man \textbf{dominante Strategie}. Spielt jeder Spieler eine dominante Strategie, so liegt ein \textbf{Gleichgewicht in dominanten} Strategien vor. ~\smallskip
 
-Zum Ermitteln von dominanten Strategien ist es möglich die sogenannten besten Reaktionen zu verwenden. Eine Strategie ist eine \textbf{Beste Reaktion}, wenn sie den Nutzen eines Spielers - gegeben die Strategien aller anderen Spieler - maximiert.
+Zum Ermitteln von dominanten Strategien ist es möglich die sogenannten besten Reaktionen zu verwenden. Eine Strategie ist eine \textbf{Beste Reaktion}, wenn sie den Nutzen eines Spielers - gegeben die Strategien aller anderen Spieler - maximiert. ~\smallskip
 
 \begin{kr}[Beste Antwort]~\
 	\begin{itemize} 		
@@ -42,17 +42,17 @@ Zum Ermitteln von dominanten Strategien ist es möglich die sogenannten besten R
 		\item Eine Strategie ist für Spieler 1 dominant, falls nach KR (Beste Antwort) alle Auszahlungen in der zugehörigen Zeile unterstrichen sind.
 		\item Eine Strategie ist für Spieler 2 dominant, falls nach KR (Beste Antwort) alle Auszahlungen in der zugehörigen Spalte unterstrichen sind.
 	\end{itemize}	
-\end{kr}
+\end{kr}  ~\smallskip
 
-Ein \textbf{Gefangenendilemma} kennzeichnet eine Situation, in der individuell rationales Verhalten der einzelnen Spieler zu einem für die Gruppe nicht Pareto-optimialem Ergebnis führt. Es existiert dann ein Strategienpaar, das zu einer Pareto-Verbessrung führt und das nur durch Änderung der Strategien aller Spieler erreicht werden kann. ~\bigskip
+Ein \textbf{Gefangenendilemma} kennzeichnet eine Situation, in der individuell rationales Verhalten der einzelnen Spieler zu einem für die Gruppe nicht Pareto-optimalem Ergebnis führt. Es existiert dann ein Strategienpaar, das zu einer Pareto-Verbessrung führt und das nur durch Änderung der Strategien aller Spieler erreicht werden kann. ~\bigskip
 
-Ein \textbf{Nash-Gleichgewicht in reinen Strategien} ist ein Strategienpaar, bei dem jeder Spieler die optimale Wahl trifft, gegeben der Wahl des anderen Spielers. Sie ist also die gegenseitig beste Antwort und damit will kein Spieler einseitig vom  Nash-Gleichgewicht abweichen.
+Ein \textbf{Nash-Gleichgewicht in reinen Strategien} ist ein Strategienpaar, bei dem jeder Spieler die optimale Wahl trifft, gegeben der Wahl des anderen Spielers. Sie ist also die gegenseitig beste Antwort und damit will kein Spieler einseitig vom  Nash-Gleichgewicht abweichen.  ~\smallskip
 
 \begin{kr}[Nash-Gleichgewicht in reinen Strategien] ~\\
 	Das Strategienpaar das zu einer Zelle führt, in der nach KR (Beste Antwort) die Auszahlungen beider Spieler unterstrichen sind, stellt ein Nash-Gleichgewicht in reinen Strategien dar.
 \end{kr}
 
-Es muss kein Nash-Gleichgewicht in reinen Strategien geben. Ein \textbf{Nash-Gleichgewicht in gemischten Strategien} ist eine Wahrscheinlichkeitsverteilung über die reine Strategien aller Spieler von der kein Spieler einseitig abweichen möchte. 
+Es muss kein Nash-Gleichgewicht in reinen Strategien geben. Ein \textbf{Nash-Gleichgewicht in gemischten Strategien} ist eine Wahrscheinlichkeitsverteilung über die reine Strategien aller Spieler von der kein Spieler einseitig abweichen möchte.   ~\smallskip
 
 \begin{kr}[Nash-Gleichgewicht in gemischten Strategien] ~\\
 	Haben beide Spieler zwei Strategien, so kann man das Nash-Gleichgewicht in gemischten Strategien ermitteln indem man für jeden Spieler den erwarteten Nutzen seiner beiden Strategien gegeben der Wahrscheinlichkeitsverteilung gleich setzt.
@@ -62,20 +62,20 @@ Es muss kein Nash-Gleichgewicht in reinen Strategien geben. Ein \textbf{Nash-Gle
 
 Eine \textbf{Strategie} in sequentiellen Spielen ist ein vollständiger Aktionsplan, der zu jedem beliebigen Spielzeitpunkt die Aktion eines Spielers beschreibt.
 
-Sequentielle Spiele werden im Allgemeinen durch Rückwärtsinduktion gelöst. Dabei werden alle Nash-Gleichgewichte identifiziert die nicht auf unglaubwürdigen Drohungen beruhen. Die resultierende Strategie definiert ein \textbf{teilspielperfektes Nash-Gleichgewicht}.
+Sequentielle Spiele werden im Allgemeinen durch Rückwärtsinduktion gelöst. Dabei werden alle Nash-Gleichgewichte identifiziert die nicht auf unglaubwürdigen Drohungen beruhen. Die resultierende Strategie definiert ein \textbf{teilspielperfektes Nash-Gleichgewicht}.  ~\smallskip
 
 \begin{kr}[Teilspielperfekte Nash-Gleichgewichte] ~\\
-	Ersetze iterativ alle letzten Entscheidungsknoten durch die glaubwürdigen Drohungen im Punkt, bis alle Knoten ersetzt sind. Alle getroffenen Entscheidungen bilden das teilspielperfekte Nash-Gleichgewicht.
+	Ersetze iterativ alle letzten Entscheidungsknoten durch die glaubwürdigen Drohungen im Punkt, bis alle Knoten ersetzt sind. Alle getroffenen Entscheidungen bilden als Strategie das teilspielperfekte Nash-Gleichgewicht.
 \end{kr}
 
 \section{Auktionen}
 
 Es gibt vier Standardformen der Auktion. Sie unterscheiden sich in der Art der Gebotsabgaben, der Zuschlags- und Preisregeln:
 \begin{itemize}
-	\item \textbf{Englische Auktion}: Aufsteigende, offene Gebote. Höchstgebot bzw. letzter verbleibender Bieter erhält den Zuschlag. Gewinner zahl sein Gebot.
+	\item \textbf{Englische Auktion}: Aufsteigende, offene Gebote. Höchstgebot bzw. letzter verbleibender Bieter erhält den Zuschlag. Gewinner zahlt sein Gebot.
 	\item \textbf{Holländische Auktion}: Absteigende Auktion. Preisvorschläge durch Auktionator fallen. Den Zuschlag erhält das erste Gebot und gezahlt wird auch das Gebot.
-	\item \textbf{Erstpreisauktion}: Verdeckte, einmalige Gebotsabgabe. Höchstgebot erhält den Zuschlag. Gewinner zahlt sein Gebot.
-	\item \textbf{Zweitpreisauktion} (auch Vickrey-Auktion genannt): Verdeckte, einmalige Gebotsabgabe. Hächstebot erhält den Zuschlag. Gewinner zahl das zweithächste Gebot.
+	\item \textbf{Erstpreisauktion}: Verdeckte, einmalige Gebotsabgabe. Das Höchstgebot erhält den Zuschlag und der Gewinner zahlt sein Gebot.
+	\item \textbf{Zweitpreisauktion} (auch Vickrey-Auktion genannt): Verdeckte, einmalige Gebotsabgabe. Das Höchstgebot erhält den Zuschlag und  der Gewinner zahlt das zweithöchste Gebot.
 \end{itemize}
 
 \subsubsection*{Private Value Auktion}
