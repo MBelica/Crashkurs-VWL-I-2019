@@ -56,7 +56,7 @@ EEP, Engelkurve, PEP und Nachfragekurve sehen für unterschiedliche Nachfragefun
 	\item \textbf{Substitute}: Güter bei denen, falls ein Gut teurer wird, sich der  Konsument bemüht, dieses Gut durch sein Substitut zu ersetzen ($\frac{\Delta x_i}{\Delta p_j} > 0$)
 	\item \textbf{Komplemente}: Güter bei denen, falls ein Gut teurer wird, der Konsument weniger davon nachfragen wird und auch den Konsum der komplementären Güter einschränkt ($\frac{\Delta x_i}{\Delta p_j} < 0$)
 \end{itemize}
-
+% todo Zeichnungen
 \section{Stusky-Zerlegung}
 
 Eine Veränderung des Preises eines Guts (z.B. $p_1$ sinkt auf $p_1'$) hat zwei Effekte auf die Nachfrage:
@@ -103,6 +103,29 @@ $$ \Delta x_1^{n} = x_1^{*}(p_1', p_2, m) - x_1^*(p_1', p_2, m') $$
 		\item Gesamteffekt: $\Delta x_1^{GE} = \Delta x_1^{s} + \Delta x_1^{n}$.
 	\end{itemize}
 \end{kr}
+
 % todo Bild
 
-% todo Hicks Diskutieren Sie kurz den Unterschied zwischen den Ideen, die der Hicks- und Slutsky-Zerlegung zugrunde liegen
+\subsubsection*{Nachfragefunktion und Totale Variation}
+
+Eine Funktion $f(x_1 ,x_2, \dotsc, x_n)$ ist \textbf{homogen} vom Grade $r$, genau dann, wenn:
+$$ z^r \cdot f(x_1, x_2, \dotsc, x_n) = f(z \cdot x_1, z \cdot x_2, \dotsc, z \cdot x_n) \quad \text{(für alle $z > 0$)} $$
+Nachfragekurven bzw. Budgetmengen sind homogen vom Grad 0; das liegt daran, dass:
+\begin{align*}
+	B(z \cdot p, z \cdot m) & = \{ x \in X ~|~ x \geq 0, z \cdot p_1 + z \cdot p_2 + \dotsc + z \cdot p_n \leq z \cdot m \} \\
+	& = \{ x \in X ~|~ x \geq 0, p_1 + p_2 + \dotsc + p_n \leq m \} = B(p, m)
+\end{align*}
+Daraus folgt, dass da proportionale Anpassungen die Budgetmenge unverändert lassen, die Nachfragekurve als Lösung des Nutzenmaximierungsproblems invariant gegenüber proportionalen Änderungen aller Preise $p$ und des Einkommens $m$ ist. 
+% todo Während der Vorlesung: Was hat dieses Ergebnis mit Inflation zu tun?
+
+\subsubsection*{Slutsky-Zerlegung nach Hicks}
+
+Analog zur obigen Slutsky-Zerlegung ist auch hier eine Preisveränderung der Ausgangspunkt. Angenommen der Preis $p_1$ fällt auf $p_1'$, so resultiert erneut eine Nachfrageveränderung. Die Idee von Hicks ist allerdings die Aufspaltung in Einkommens- und Substitutionseffekt auf einen anderen Grundgedanken zu stützen. ~\bigskip
+
+Slutsky hat ein fiktives Einkommen $m'$ eingeführt, dass die Kaufkraft konstant hält; der Nutzer soll sich auch bei den neuen Preisen das alte Güterbündel leisten können. Bei Hicks wird allerdings ein Einkommen eingeführt, sodass der ursprüngliche Nutzen optimal bleibt. ~\bigskip % todo Während der Vorlesung: Zeichnungen zur Erklärung
+
+Auch hier ist im Substitutionseffekt die Änderungen des Preises stets entgegengesetzt der nachgefragten Menge, d.h. Preis und nachgefragte Menge haben entgegengesetzte Vorzeichen, also: % todo Während der Vorlesung: WARP beim Beweis!
+
+$$ \frac{\Delta x_i^s}{\Delta p_i} < 0 $$
+
+Bei kleinen Preisänderungen sind die  Substitutionseffekte nach Slutsky und Hicks gleich.

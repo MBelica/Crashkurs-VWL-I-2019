@@ -1,5 +1,12 @@
 \documentclass[10pt]{scrreprt}
 
+% todo Todo: Theorie der Unternehmung von neu 
+% todo Todo: Theorie der Unternehmung: wie man kostenfunktionen explizit berechet
+% todo Todo: Komperative Statistik der Nachfrage Zeichnungen
+% todo Todo: Oligopol: Werte als Lösung für Linearen Fall.
+% todo Todo: Aufgaben zu jedem Thema mit Lösungen und Zeichnungen!
+% todo Todo: Alle Zeichnungen erneut!
+
 \usepackage{cmap}
 
 \usepackage[utf8]{inputenc}
@@ -10,9 +17,11 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amsfonts}
+\usepackage{caption}
 \usepackage{csquotes}
 \usepackage{enumerate}
 \usepackage{geometry}
+\usepackage{hyperref}
 \usepackage{mathtools}
 \usepackage{mdframed}
 \usepackage{microtype}
@@ -73,17 +82,21 @@
 
 \input{chap/Preface}
 
-\include{chap/Spieltheorie}
-\include{chap/AngebotsNachfragemodells}
-\include{chap/RationalChoice}
-\include{chap/Nachfrageanalyse}
-\include{chap/TheorieUnternehmung}
-\include{chap/VollkommenerWettbewerb}
-\include{chap/Monopol}
-\include{chap/Oligopol}
-% \include{chap/chap11} 
-% todo todo
-% todo Die komplizierten Zeichnung im Skript
-% todo Ratschlag: Komperative Statistiken aus Skript!
+\begingroup
+	%\renewcommand{\cleardoublepage}{}
+	%\renewcommand{\clearpage}{}
+	
+	\include{chap/Spieltheorie}
+	\include{chap/AngebotsNachfragemodells}
+	\include{chap/RationalChoice}
+	\include{chap/Nachfrageanalyse}
+	\include{chap/TheorieUnternehmung}
+	\include{chap/VollkommenerWettbewerb}
+	\include{chap/Monopol}
+	\include{chap/Oligopol}
+	%\include{chap/AllgemeinesGleichgewicht}
+\endgroup
+
+% todo Während der Vorlesung: Verhaltensökonomie: Ultimatum Game, Dictator Game
 
 \end{document}
